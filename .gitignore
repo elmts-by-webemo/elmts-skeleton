@@ -1,9 +1,7 @@
 node_modules/
 public/fonts/
 public/files/
-public/images/.elmts/
-public/images/flags/
-public/images/loaders/
+public/images/
 resources/.temp/
 src/images/.temp/
 to_del/
