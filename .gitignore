@@ -1,4 +1,5 @@
-node_modules/
-vendor/
-resources/images/.temp/
-resources/temp/
+/node_modules/*
+/public/images/.elmts/*
+/resources/.temp/*
+/src/images/.temp/*
+/vendor/*
