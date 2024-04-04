@@ -1,0 +1,36 @@
+{
+    "name": "elmts-by-webemo/elmts-skeleton",
+    "type": "library",
+    "license": "COMMERCIAL",
+    "support": {
+        "source": "https://github.com/elmts-by-webemo/elmts-skeleton/issues"
+      },
+    "authors":
+    [
+        {
+            "name": "Lukasz Trocha",
+            "email": "lukasz.trocha@webemo.pl"
+        },
+        {
+            "name": "Marcin Ulezalka",
+            "email": "marcin.ulezalka@webemo.pl"
+        }
+    ],
+    "require":
+    {
+        "php": "^8.1"
+    },
+    "autoload": 
+    {
+        "psr-4":
+        {
+            "App\\":"app/"
+        },
+        "files": [
+            "bootstrap/boot.php"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}

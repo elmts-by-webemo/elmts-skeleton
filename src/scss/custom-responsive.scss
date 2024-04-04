@@ -1,0 +1,383 @@
+
+// Extralarge devices (desktops, less than 1400px)
+@media (max-width: 1399.98px) {
+
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+	.products-flexbox {
+		.product-service {
+			width: 32%;
+		}
+	}
+
+	.pagination-nav-wrapper {
+		flex-direction: column;
+
+		.pagination-view {
+			&:first-child {
+				margin-top: 20px;
+				order: 5;
+			}
+			
+			&:last-child {
+				margin-top: 20px;
+			}
+		}
+
+		.pagination-nav {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+
+			li {
+				a {
+					display: block;
+					padding: 10px;
+					font-size: 13px;
+					color: #666;
+					transition: all 0.3s;
+
+					&:hover {
+						color: $color1;
+					}
+				}
+
+				&.active {
+					a {
+						font-weight: 700;
+						color: $color1;
+					}
+				}
+
+				&:first-child, &:last-child {
+					a {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+
+	.cards-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.table-search-engine {
+		.search-engine-inner {
+			flex-wrap: wrap;
+
+			.inner-service {
+				width: 100%;
+
+				.form-service {
+					margin-right: 10px;
+				}
+
+				.select2-container {
+					margin-left: 10px;
+				}
+
+				& + .inner-service {
+					margin-left: 10px;
+				}
+			}
+
+			.inner-buttons-wrapper {
+				margin-top: 5px;
+				width: 100%;
+
+				> * {
+					margin-left: 0;
+					width: 100%;
+
+					& + * {
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+	.cards-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	section.logowanie-section-content {
+		.content-flexbox {
+			.flexbox-service {
+				width: 50%;
+			}
+
+			.flexbox-cta {
+				width: 50%;
+			}
+		}
+	}
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+	$sidebar-width: 100%;
+
+	.body-wrapper {
+		display: block;
+
+		.inner-wrapper {
+			min-width: 100%;
+			max-width: 100%;
+		}
+	}
+
+	.header-sidebar {
+		left: 0;
+		position: absolute;
+		min-width: 100%;
+		max-width: 100%;
+
+		.nav-left-sm {
+			display: block;
+		}
+
+		.logo {
+			position: relative;
+			left: auto;
+			width: auto;
+			background: none;
+		}
+
+		.sidebar-navigation {
+			margin-top: 0;
+
+			ul {
+				li {
+					a {
+						padding: 15px 35px 15px 15px;
+
+						img {
+							margin-right: 15px;
+						}
+					}
+
+					&.child {
+						ul {
+							li {
+								a {
+									padding: 6px 50px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.active {
+			position: absolute;
+			left: -$sidebar-width;
+		}
+	}
+
+	nav.section-header {
+		padding-left: 0;
+
+		.dropdown {
+			.btn-avatar {
+				.avatar-name {
+					display: none;
+				}
+			}
+		}
+	}
+
+	section.section-footer {
+		p {
+			text-align: center;
+		}
+
+		&.active {
+			margin-left: 0;
+		}
+	}
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+	.products-flexbox {
+		.product-service {
+			width: 48%;
+		}
+	}
+
+	section.logowanie-section-content {
+		.content-flexbox {
+			flex-direction: column;
+
+			.flexbox-service {
+				width: 100%;
+				min-height: 100vh;
+			}
+
+			.flexbox-cta {
+				display: none;
+			}
+		}
+	}
+
+	.body-wrapper {
+		.inner-wrapper {
+			.basic-box {
+				padding: 0 10px 10px 10px;
+
+				.box-heading {
+					.dropdown {
+						margin-top: 10px;
+					}
+				}
+
+				> * {
+					&:not(.nav-pills) {
+						margin-top: 10px;
+					}
+				}
+
+				h1, h2, h3 {
+					margin: 10px 0 0 0;
+				}
+			}
+
+			.welcome-box {
+				.box-steps {
+					.step-service {
+						width: 48%;
+						margin-top: 4%;
+
+						&:last-child {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	nav.section-header {
+		.header-flexbox {
+			.flexbox-inner-wrapper {
+				>* {
+					margin-right: 15px;
+				}
+			}
+		}
+	}
+
+	.buttons-fixed {
+		right: 0;
+
+		.fixed-background {
+			display: none;
+		}
+
+		.btn-circle {
+			height: 35px;
+			width: 35px;
+
+			span {
+				display: none;
+			}
+
+			img {
+				opacity: 1;
+			}
+		}
+
+		&.body-bottom {
+			bottom: 47px;
+		}
+	}
+
+	.nav-pills {
+		margin-top: 0;
+
+		.nav-heading {
+			margin-right: 10px;
+		}
+
+		.nav-item {
+			margin-right: 10px;
+
+			.nav-link {
+				font-size: 11px;
+				letter-spacing: -0.5px;
+				text-transform: uppercase;
+				padding-left: 7px;
+				padding-right: 7px;
+			}
+		}
+	}
+
+	.sticky-search-engine {
+		padding: 10px;
+
+		.search-engine-inner {
+			.inner-service {
+				flex-wrap: wrap;
+
+				.form-control {
+					width: auto;
+				}
+
+				.breakpoint {
+					width: 100%;
+				}
+			}
+		}
+
+		.btn {
+			margin-top: 10px;
+			margin-left: 13px;
+
+			&:first-of-type {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.table-search-engine {
+		.search-engine-inner {
+			.inner-service {
+				flex-wrap: wrap;
+
+				.form-service {
+					margin-right: 0;
+				}
+
+				.select2-container {
+					margin-left: 0;
+				}
+
+				& + .inner-service {
+					margin-left: 0;
+				}
+
+				> * {
+					& + * {
+						margin-top: 5px !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 400px) {
+	.cards-grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
