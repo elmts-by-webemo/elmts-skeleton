@@ -1,5 +1,10 @@
-/node_modules/*
-/public/images/.elmts/*
-/resources/.temp/*
-/src/images/.temp/*
-/vendor/*
+node_modules/
+public/fonts/
+public/files/
+public/images/.elmts/
+public/images/flags/
+public/images/loaders/
+resources/.temp/
+src/images/.temp/
+to_del/
+vendor/
