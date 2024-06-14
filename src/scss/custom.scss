@@ -1,6 +1,6 @@
 $color1: #2bbbad;
 $sidebar-width: 260px;
-$elmts-data-background: "../img/";
+$elmts-data-background: "../images/.elmts/";
 
 body {
 	min-height: 100vh;
@@ -22,11 +22,12 @@ body {
 	}
 
 	a {
-		text-decoration: none !important;
+		text-decoration: none;
 		color: $color1;
 
 		&:hover {
 			color: darken($color1, 10%);
+			text-decoration:underline;
 		}
 	}
 
@@ -45,67 +46,6 @@ body {
 
 	.list-unstyled {
 		padding: 0;
-	}
-
-	.btn {
-		margin: 0;
-		border-radius: 40px;
-		font-size: 11px;
-		text-transform: uppercase;
-		padding: 10px 30px;
-		transition: 0.3s;
-
-		&.btn-sm {
-			padding: 5px 22px;
-			font-size: 10px;
-		}
-
-		&.btn-100 {
-			width: 100%;
-		}
-
-		&.btn-text {
-
-		}
-
-		&.loading {
-			position: relative;
-			pointer-events: none;
-
-			&:before {
-				content: '';
-				position: absolute;
-				top: -10%;
-				left: -5%;
-				width: 110%;
-				height: 120%;
-				background: #fff;
-				opacity: 0.85;
-				filter: blur(1px);
-			}
-
-			&:after {
-				content: '';
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				background: url(#{$elmts-data-background}icons/loading.svg) center;
-				background-size: cover;
-				height: 18px;
-				width: 18px;
-				animation: loader-rotate cubic-bezier(0.455, 0.03, 0.515, 0.955) 4s infinite;
-			}
-
-			@keyframes loader-rotate {
-				0% {
-					transform: translate(-50%, -50%) rotate(0deg);
-				}
-				100% {
-					transform: translate(-50%, -50%) rotate(360deg);
-				}
-			}
-		}
 	}
 
 	.m-t-5 { margin-top: 5px; }
@@ -133,6 +73,14 @@ body {
 	.p-b-20 { padding-bottom: 20px; }
 	.p-b-25 { padding-bottom: 25px; }
 	.p-b-30 { padding-bottom: 30px; }
+}
+
+.border-dashed {
+	border-style: dashed;
+}
+
+.border-dotted {
+	border-style: dotted;
 }
 
 .body-payment-alert {
@@ -220,7 +168,7 @@ body {
 	}
 }
 
-section.logowanie-section-content {
+section.auth-section-content {
 	.content-flexbox {
 		min-height: 100vh;
 		display: flex;
@@ -236,80 +184,38 @@ section.logowanie-section-content {
 			position: relative;
 
 			.logo {
-				letter-spacing: 1px;
 				text-align: center;
 				display: flex;
 				align-items: center;
-				font-size: 28px;
-				font-weight: 700;
-				color: #555;
-
-				span {
-					color: $color1;
-					font-size: 35px;
-					transform: translateY(12px);
-				}
 
 				img {
 					height: 40px;
 				}
-			}
 
-			.form-service {
-				margin-top: 20px !important;
-				width: 250px;
-			}
-
-			.btn {
-				margin-top: 60px;
-				width: 100%;
-
-				img {
-					height: 15px;
-				}
-
-				& + .btn {
-					margin-top: 10px;
-				}
-			}
-
-			.input-group {
-				.btn {
-					padding: 0 15px;
+				a {
+					color: inherit;
+					&:hover {
+						color: darken($color1, 10%);
+					}
 				}
 			}
 
 			.forgot {
-				margin-top: 30px;
 				display: block;
-				font-size: 11px;
 				color: $color1;
 				cursor: pointer;
 			}
 
 			.buttons-wrapper {
-				margin-top: 50px;
 				display: flex;
 				justify-content: center;
 				flex-wrap: wrap;
-
-				.btn {
-					width: auto;
-					white-space: nowrap;
-					margin: 5px;
-				}
 			}
 		}
 
 		.flexbox-cta {
 			width: 60%;
 			overflow: hidden;
-
-			iframe {
-				border: none;
-				width: 100%;
-				height: 100%;
-			}
 		}
 	}
 }
@@ -2202,43 +2108,17 @@ nav.section-header {
 	}
 }
 
-input {
-	border: 1px solid #ced4da !important;
-}
-
 .form-service {
 	margin-top: 0 !important;
 
-	label {
-		margin-top: 20px;
-		font-size: 12px;
-		margin-bottom: 5px;
-		color: #777;
-		font-weight: 400;
-	}
-
-	input, select {
-		height: 35px;
-		font-size: 14px;
-		color: #444;
-		border: 1px solid #ced4da !important;
-	}
-
 	select {
 		cursor: pointer;
-		border: 1px solid #ced4da !important;
 		border-radius: .25rem !important;
 	}
 
 	.input-group {
 		&:has(.btn) {
 			flex-wrap: nowrap;
-
-			.btn {
-				margin-top: 0 !important;
-				width: auto !important;
-				height: 35px;
-			}
 		}
 	}
 
@@ -2302,10 +2182,6 @@ input {
 			font-size: 11px;
 			color: #777;
 		}
-	}
-
-	.btn {
-		margin-top: 20px;
 	}
 }
 
@@ -2561,9 +2437,6 @@ input {
 		}
 	}
 
-	.btn {
-		margin-left: 13px;
-	}
 }
 
 .table-search-engine {

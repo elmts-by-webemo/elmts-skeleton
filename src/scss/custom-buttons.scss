@@ -1,0 +1,89 @@
+.btn {
+	transition: 0.3s;
+
+	&.btn-webemo-outline {
+		border-color:#2bbbad;
+		background: lighten(#2bbbad, 90%);
+		color:#2bbbad;
+		text-decoration:none;
+
+		&:hover {
+			background: #2bbbad;
+			color:#fff;
+		}
+
+	}
+
+	&.btn-webemo {
+		background: #2bbbad;
+		color:#fff;
+		text-decoration:none;
+
+		&:hover {
+			background: darken(#2bbbad, 10%);
+		}
+
+	}
+
+	&.btn-webemo-dark {
+		background: #212529;
+		color:#fff;
+		text-decoration:none;
+
+		&:hover {
+			background: lighten(#212529, 10%);
+		}
+	}
+
+	&.btn-webemo-dark-outline {
+		border-color:#212529;
+		background: lighten(#212529, 90%);
+		color:#212529;
+		text-decoration:none;
+
+		&:hover {
+			background: #212529;
+			color:#fff;
+		}
+
+	}
+
+	&.loading {
+		position: relative;
+		pointer-events: none;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: -10%;
+			left: -5%;
+			width: 110%;
+			height: 120%;
+			background: #fff;
+			opacity: 0.85;
+			filter: blur(1px);
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: url(#{$elmts-data-background}icons/loading.svg) center;
+			background-size: cover;
+			height: 18px;
+			width: 18px;
+			animation: loader-rotate cubic-bezier(0.455, 0.03, 0.515, 0.955) 4s infinite;
+		}
+
+		@keyframes loader-rotate {
+			0% {
+				transform: translate(-50%, -50%) rotate(0deg);
+			}
+			100% {
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	}
+}
